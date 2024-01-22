@@ -1,3 +1,5 @@
 #!/usr/bin/python3
+res = ""
 for letter in range(97, 123):
-    print("%s" % chr(letter), end="")
+    res= res + chr(letter)
+print(str(res))
