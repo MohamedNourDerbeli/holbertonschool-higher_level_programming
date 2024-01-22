@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 import string
-lower =string.ascii_lowercase
-print(lower)
+for letter in string.ascii_lowercase:
+	print(letter,end="")
