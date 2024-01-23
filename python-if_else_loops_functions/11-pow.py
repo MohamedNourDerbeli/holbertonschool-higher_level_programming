@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 def pow(a, b):
-    if a == 0 and b < 0:
-        raise ValueError("Undefined result: 0^(-b) where b is negative.")
     if b == 0:
-        return (1)
-    if a < 0 and b % 2 == 0:
-        return ((-1) * (abs(a) ** b))
+        return 1
+    elif b < 0:
+        return 1 / pow(a, -b)
+    elif b % 2 == 0:
+        half_pow = pow(a, b // 2)
+        return half_pow * half_pow
     else:
-        return (a ** b)
+        half_pow = pow(a, b // 2)
+        return a * half_pow * half_pow
