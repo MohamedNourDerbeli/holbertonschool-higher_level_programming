@@ -8,6 +8,6 @@ def safe_print_list_integers(my_list=[], x=0):
             count += 1
         print("")
         return count
-    except (RuntimeError, TypeError, NameError):
+    except (RuntimeError, TypeError, NameError, IndexError):
         print("")
         return count
