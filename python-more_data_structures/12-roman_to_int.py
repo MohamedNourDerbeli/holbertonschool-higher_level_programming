@@ -8,9 +8,9 @@ def roman_to_int(roman_string):
     for i in roman_string[::-1]:
         if i not in roman:
             return 0
-        if roman[i] < prev:
-            s -= roman[i]
-        else:
+        if roman[i] >= prev or prev == roman[i]:
             s += roman[i]
+        else:
+            s -= roman[i]
         prev = roman[i]
     return s
