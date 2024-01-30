@@ -4,7 +4,7 @@ def roman_to_int(roman_string):
     s = 0
     if not roman_string or roman_string is int:
         return 0
-    for i in roman_string:
+    for i in roman_string[::-1]:
         if i in roman:
             s += roman[i]
     return s
