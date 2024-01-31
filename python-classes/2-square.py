@@ -24,8 +24,5 @@ class Square:
                 raise ValueError
         except TypeError:
             print("size must be an integer")
-            return
         except ValueError:
             print("size must be >= 0")
-            return
-        return
