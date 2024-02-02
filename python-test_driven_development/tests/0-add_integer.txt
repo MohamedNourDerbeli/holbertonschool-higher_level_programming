@@ -42,6 +42,16 @@ TypeError: a must be an integer
 2
 >>> add_integer(-2)
 96
+
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(None)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
 >>> add_integer(245545, 4477878778)
 4478124323
 
