@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def add_integer(a, b=98):
     """
     This function takes two parameters, 'a' and 'b', and adds them together.
