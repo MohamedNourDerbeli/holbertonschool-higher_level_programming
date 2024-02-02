@@ -55,4 +55,9 @@ TypeError: a must be an integer
 >>> add_integer(245545, 4477878778)
 4478124323
 
+>>> a = 10
+>>> b = -5
+>>> add_integer(a, b)
+5
+
 """
