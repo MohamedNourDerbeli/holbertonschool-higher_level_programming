@@ -32,7 +32,7 @@ TypeError: a must be an integer
 2
 >>> add_integer(-2)
 96
->>> add_integer(2)
-100
+>>> add_integer(245545, 4477878778)
+4478124323
 
 """
