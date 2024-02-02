@@ -1,10 +1,11 @@
 #!/usr/bin/python3
+"""
+    This function takes two parameters, 'a' and 'b', and adds them together.
+"""
 
 
 def add_integer(a, b=98):
     """
-    This function takes two parameters, 'a' and 'b', and adds them together.
-
     Parameters:
     a (int or float): The first number to be added.
     b (int or float, optional): The second number to be added. Defaults to 98.
