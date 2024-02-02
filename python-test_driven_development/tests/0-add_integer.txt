@@ -70,4 +70,7 @@ TypeError: a must be an integer
 >>> add_integer(a, b)
 5
 
+>>> add_integer(True, 33)
+34
+
 """
