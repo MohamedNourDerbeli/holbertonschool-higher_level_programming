@@ -30,5 +30,7 @@ TypeError: a must be an integer
 
 >>> add_integer(-2, 4.545)
 2
+>>> add_integer(-2)
+96
 
 """
