@@ -31,5 +31,8 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_error(self):
         """Error case"""
-        self.assertRaises(TypeError, max_integer, ["r", 1])
-        self.assertRaises(TypeError, max_integer, [23, [11, 23]])
+        with self.assertRaises(TypeError):
+            max_integer(None)
+
+        with self.assertRaises(TypeError):
+            max_integer(["Monty", 89, 34, -9.7, "Python"])
