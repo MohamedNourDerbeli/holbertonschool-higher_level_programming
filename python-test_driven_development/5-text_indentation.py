@@ -52,4 +52,4 @@ def text_indentation(text):
                 i += 1
             te += "\n\n"
         i += 1
-    print(te,end="")
+    print("{}".format(te),end="")
