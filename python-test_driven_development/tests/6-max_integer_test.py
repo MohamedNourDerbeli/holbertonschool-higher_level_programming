@@ -24,6 +24,8 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([-1, -25, 11, 11]), 11)
         self.assertEqual(max_integer([-1, -25, 0.1, 11.4]), 11.4)
         self.assertEqual(max_integer(list(range(100000))), 99999)
+        test = [1, 1, 3]
+        self.assertEqual(max_integer(test), 3)
 
     def test_emty_list(self):
         """Emty list"""
@@ -31,8 +33,5 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_error(self):
         """Error case"""
-        with self.assertRaises(TypeError):
-            max_integer(None)
-
-        with self.assertRaises(TypeError):
-            max_integer(["Monty", 89, 34, -9.7, "Python"])
+        self.assertRaises(TypeError, max_integer, ["r", 1])
+        self.assertRaises(TypeError, max_integer, [23, [11, 23]])
