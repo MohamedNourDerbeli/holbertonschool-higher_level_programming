@@ -13,7 +13,8 @@ class TestMaxInteger(unittest.TestCase):
         """Test case"""
         self.assertEqual(max_integer([1, 2]), 2)
         self.assertEqual(max_integer([1]), 1)
-        self.assertIsNone(max_integer([]),None)
+        self.assertIsNone(max_integer())
+        self.assertEqual(max_integer([]), None)
         self.assertEqual(max_integer([-1, -25, -6]), -1)
         self.assertRaises(Exception, max_integer,["str",1])
 
