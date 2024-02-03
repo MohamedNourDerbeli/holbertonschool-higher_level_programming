@@ -17,6 +17,9 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([]), None)
         self.assertEqual(max_integer([-1, -25, -6]), -1)
         self.assertEqual(max_integer([-1, -25, 11, 11]), 11)
+
+    def test_error(self):
+        """Error case"""
         self.assertRaises(Exception, max_integer,["str", 39, {4}, 2,3])
 
 if __name__ == "__main__":
