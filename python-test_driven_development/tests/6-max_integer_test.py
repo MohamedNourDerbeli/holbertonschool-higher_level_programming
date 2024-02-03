@@ -27,6 +27,8 @@ class TestMaxInteger(unittest.TestCase):
         test = [1, 1, 3]
         self.assertEqual(max_integer(test), 3)
         self.assertEqual(max_integer([[1, 2], [1, 3]]), [1, 3])
+        self.assertEqual(max_integer([{1, 9}, {2}, {3}]), {1, 9})
+
 
     def test_list_of_strings(self):
         self.assertEqual(max_integer("6789"), '9')
@@ -43,6 +45,14 @@ class TestMaxInteger(unittest.TestCase):
         """Error case"""
         self.assertRaises(TypeError, max_integer, ["r", 1])
         self.assertRaises(TypeError, max_integer, [23, [11, 23]])
+        with self.assertRaises(TypeError):
+            max_integer({1, 2}, {3, 4, 5})
+        with self.assertRaises(TypeError):
+            max_integer({1, 2, 3, 4, 5})
+        with self.assertRaises(TypeError):
+            max_integer([-10, 0.5, "str", {1, 2}])
+        with self.assertRaises(TypeError):
+            max_integer([None, True])
 
 if __name__ == "__main__":
     unittest.main()
