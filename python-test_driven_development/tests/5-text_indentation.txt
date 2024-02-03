@@ -19,4 +19,11 @@ TypeError: text must be a string
 >>> text_indentation(a)
 Hi this is test
 
+>>> a = "Hi this"
+>>> b = " is test"
+>>> text_indentation(a, b)
+Traceback (most recent call last):
+TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+
 """
