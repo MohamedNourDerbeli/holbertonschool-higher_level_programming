@@ -16,7 +16,7 @@ Traceback (most recent call last):
 TypeError: first_name must be a string
 
 >>> say_my_name("Ahmed")
-My name is Ahmed
+My name is Ahmed 
 
 >>> say_my_name("Ahmed", "Ali")
 My name is Ahmed Ali
@@ -24,3 +24,14 @@ My name is Ahmed Ali
 >>> say_my_name("Ahmed", "Ali", "Aymen")
 Traceback (most recent call last):
 TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+>>> a = "hi"
+>>> b = "test"
+>>> say_my_name(a, b)
+My name is hi test
+
+>>> say_my_name(5, "Ahmed")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+"""
