@@ -30,5 +30,5 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_error(self):
         """Error case"""
-        self.assertRaises(TypeError, max_integer, ["str", 32, 3])
+        self.assertRaises(TypeError, max_integer, ["r", 1])
         self.assertRaises(TypeError, max_integer, [23, [11, 23]])
