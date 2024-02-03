@@ -47,6 +47,3 @@ def text_indentation(text):
         # If the character is one of the specified punctuation marks
         if i in split:
             print("\n\n", end='')
-
-    # Print an additional newline at the end for proper formatting
-    print("\n")
