@@ -11,11 +11,12 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_all(self):
         """Test case"""
-        self.assertEqual(max_integer([1, 2]), 2)
+        self.assertEqual(max_integer([11, 1]), 11)
         self.assertEqual(max_integer([1]), 1)
         self.assertIsNone(max_integer())
         self.assertEqual(max_integer([]), None)
         self.assertEqual(max_integer([-1, -25, -6]), -1)
+        self.assertEqual(max_integer([-1, -25, 11, 11]), 11)
         self.assertRaises(Exception, max_integer,["str",1])
 
 if __name__ == "__main__":
