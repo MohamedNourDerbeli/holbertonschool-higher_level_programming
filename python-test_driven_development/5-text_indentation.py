@@ -22,7 +22,7 @@ def text_indentation(text):
     a new line until one of the specified punctuation marks is encountered.
 
     Example:
-    >>> text_indentation("Hello, how are you? I am fine. Thank you!")
+    text_indentation("Hello, how are you? I am fine. Thank you!")
     Hello,
 
     how are you?
@@ -52,4 +52,4 @@ def text_indentation(text):
                 i += 1
             te += "\n\n"
         i += 1
-    print("{}".format(te),end="")
+    print("{}".format(te), end="")
