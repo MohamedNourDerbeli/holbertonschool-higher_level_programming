@@ -40,10 +40,17 @@ def text_indentation(text):
     split = [".", "?", ":"]
 
     # Iterate through each character in the text
-    for i in text:
+    i = 0
+    s = 0
+    te = ""
+    while i < len(text):
         # Print the character without a newline
-        print(i, end="")
+        te += text[i]
 
         # If the character is one of the specified punctuation marks
-        if i in split:
-            print("\n\n", end='')
+        if text[i] in split:
+            if text[i + 1] == " ":
+                i += 1
+            te += "\n\n"
+        i += 1
+    print(te)
