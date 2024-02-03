@@ -27,9 +27,16 @@ class TestMaxInteger(unittest.TestCase):
         test = [1, 1, 3]
         self.assertEqual(max_integer(test), 3)
 
+    def test_list_of_strings(self):
+        self.assertEqual(max_integer("6789"), '9')
+        self.assertEqual(max_integer("abcxyz"), 'z')
+        self.assertEqual(max_integer(['a', 'b', 'c', 'x', 'y', 'z']), 'z')
+        self.assertEqual(max_integer(["abc", 'x']), 'x')
+
     def test_emty_list(self):
         """Emty list"""
         self.assertIsNone(max_integer())
+        self.assertIsNone(max_integer([None]), None)
 
     def test_error(self):
         """Error case"""
