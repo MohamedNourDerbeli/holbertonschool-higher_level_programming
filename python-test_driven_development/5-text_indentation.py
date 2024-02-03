@@ -37,7 +37,7 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     # List of punctuation marks to split the text on
-    split = [":", "?", ","]
+    split = [".", "?", ":"]
 
     # Iterate through each character in the text
     for i in text:
