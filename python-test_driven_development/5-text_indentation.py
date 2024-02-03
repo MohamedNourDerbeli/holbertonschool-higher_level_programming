@@ -49,7 +49,7 @@ def text_indentation(text):
 
         # If the character is one of the specified punctuation marks
         if text[i] in split:
-            if text[i + 1] == " ":
+            while text[i + 1] == " ":
                 i += 1
             te += "\n\n"
         i += 1
