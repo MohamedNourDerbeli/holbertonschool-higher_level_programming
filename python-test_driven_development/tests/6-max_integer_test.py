@@ -13,14 +13,15 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_all(self):
         """Test case"""
-        self.assertEqual(max_integer([11, 1]), 11)
-        self.assertEqual(max_integer([1]), 1)
-        self.assertEqual(max_integer([-1]), -1)
         self.assertEqual(max_integer([]), None)
+        self.assertEqual(max_integer([1]), 1)
+        self.assertEqual(max_integer([-5]), -5)
+        self.assertEqual(max_integer([11, 1]), 11)
+        self.assertEqual(max_integer([91, 41, 21]), 91)
+        self.assertEqual(max_integer([11, 11, 11]), 11)
         self.assertEqual(max_integer([-1, -25, -6]), -1)
         self.assertEqual(max_integer([-1, -25, 11, 11]), 11)
-        self.assertEqual(max_integer([11, 11, 11]), 11)
-        self.assertEqual(max_integer([91, 41, 21]), 91)
+        self.assertEqual(max_integer([-1, -25, 0.1, 11.4]), 11,4)
 
     def test_emty_list(self):
         """Emty list"""
