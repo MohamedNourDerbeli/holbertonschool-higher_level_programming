@@ -3,29 +3,23 @@
 """
 import unittest
 
+# Importing the max_integer function from the module to be tested
 max_integer = __import__("6-max_integer").max_integer
-"""
-Creating a test class that inherits from unittest.TestCase.
-This class contains test cases for the max_integer function.
-"""
-
 
 class TestMaxInteger(unittest.TestCase):
-    """
-    Test case to check if the function returns the correct
-    maximum integer in a list.
-    """
+    """Test cases for the max_integer function."""
 
     def test_add_string(self):
+        """Test the function returns the correct maximum integer in a list."""
         self.assertEqual(max_integer([1, 2]), 2)
 
-    """
-    Test case to check the behavior when an empty list is passed.
-    """
+    def test_empty_list(self):
+        """Test the behavior when an empty list is passed."""
+        self.assertIsNone(max_integer([]))
 
-    def test_emty_list(self):
-        self.assertIsNone(max_integer(), None)
-
+    def test_add_two_lists(self):
+        """Test behavior when adding two lists, should raise ValueError."""
+        self.assertRaises(TypeError, lambda: max_integer([1, 2], [1, 5]))
 
 if __name__ == "__main__":
     unittest.main()
