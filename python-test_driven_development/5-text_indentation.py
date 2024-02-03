@@ -41,7 +41,6 @@ def text_indentation(text):
 
     # Iterate through each character in the text
     i = 0
-    s = 0
     te = ""
     while i < len(text):
         # Print the character without a newline
@@ -53,4 +52,4 @@ def text_indentation(text):
                 i += 1
             te += "\n\n"
         i += 1
-    print(te)
+    print(te,end="")
