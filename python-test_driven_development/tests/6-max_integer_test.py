@@ -26,6 +26,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(list(range(100000))), 99999)
         test = [1, 1, 3]
         self.assertEqual(max_integer(test), 3)
+        self.assertEqual(max_integer([[1, 2], [1, 3]]), [1, 3])
 
     def test_list_of_strings(self):
         self.assertEqual(max_integer("6789"), '9')
