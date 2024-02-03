@@ -54,5 +54,14 @@ class TestMaxInteger(unittest.TestCase):
         with self.assertRaises(TypeError):
             max_integer([None, True])
 
+    def test_module_docstring(self):
+        moduleDoc = __import__('6-max_integer').__doc__
+        self.assertTrue(len(moduleDoc) > 1)
+
+    def test_function_docstring(self):
+        functionDoc = __import__('6-max_integer').max_integer.__doc__
+        self.assertTrue(len(functionDoc) > 1)
+
+
 if __name__ == "__main__":
     unittest.main()
