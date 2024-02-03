@@ -48,8 +48,9 @@ def text_indentation(text):
 
         # If the character is one of the specified punctuation marks
         if text[i] in split:
-            while text[i + 1] == " ":
-                i += 1
+            if i + 1 < len(text) :
+                while text[i + 1] == " ":
+                    i += 1
             te += "\n\n"
         i += 1
     print("{}".format(te), end="")
