@@ -21,9 +21,9 @@ def print_square(size):
 
     # Check if size is an integer or a non-negative float
     if not isinstance(size, (int, float)):
-        raise TypeError("size must be a non-negative integer")
+        raise TypeError("size must be an integer")
     if type(size) is float and size < 0:
-        raise TypeError("size must be a non-negative integer")
+        raise TypeError("size must be an integer")
     # Check if size is non-negative
     if size < 0:
         raise TypeError("size must be >= 0")
