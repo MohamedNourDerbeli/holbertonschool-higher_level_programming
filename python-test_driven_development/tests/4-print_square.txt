@@ -29,5 +29,14 @@ TypeError: size must be a non-negative integer
 Traceback (most recent call last):
 TypeError: size must be >= 0
 
+>>> print_square(3, 4)
+Traceback (most recent call last):
+TypeError: print_square() takes 1 positional argument but 2 were given
+
+>>> x = 3
+>>> print_square(x)
+###
+###
+###
 
 """
