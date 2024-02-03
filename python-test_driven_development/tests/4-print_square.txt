@@ -1,0 +1,33 @@
+"""
+Description: Test print_square function
+
+>>> print_square = __import__('4-print_square').print_square
+
+>>> print_square()
+Traceback (most recent call last):
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+>>> print_square(None)
+Traceback (most recent call last):
+TypeError: size must be a non-negative integer
+
+>>> print_square(3)
+###
+###
+###
+
+>>> print_square(3.45654)
+###
+###
+###
+
+>>> print_square(-3.45654)
+Traceback (most recent call last):
+TypeError: size must be a non-negative integer
+
+>>> print_square(-3)
+Traceback (most recent call last):
+TypeError: size must be >= 0
+
+
+"""
