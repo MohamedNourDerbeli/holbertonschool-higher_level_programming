@@ -20,6 +20,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([-1, -25, -6]), -1)
         self.assertEqual(max_integer([-1, -25, 11, 11]), 11)
         self.assertEqual(max_integer([11, 11, 11]), 11)
+        self.assertEqual(max_integer([91, 41, 21]), 91)
 
     def test_emty_list(self):
         """Emty list"""
