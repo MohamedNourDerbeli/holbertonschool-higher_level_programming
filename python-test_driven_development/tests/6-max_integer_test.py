@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Unittest for max_integer([..])
+"""
+    Unittest for max_integer([..])
 """
 import unittest
 
@@ -26,9 +27,5 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_error(self):
         """Error case"""
-        self.assertRaises(TypeError, max_integer, ["str", 39, {4}, 2, 3])
+        self.assertRaises(TypeError, max_integer, ["str", 32, 3])
         self.assertRaises(TypeError, max_integer, [23, [11, 23]])
-
-
-if __name__ == "__main__":
-    unittest.main()
