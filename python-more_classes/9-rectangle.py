@@ -73,21 +73,6 @@ class Rectangle:
             return 0
         return (self.__height + self.__width) * 2
 
-    def __str__(self):
-        if self.__height == 0 or self.__width == 0:
-            return ""
-        rec = ""
-        for i in range(self.__height):
-            rec += str(self.print_symbol) * self.__width + "\n"
-        return rec[:-1]
-
-    def __repr__(self):
-        return f"Rectangle({self.__width}, {self.__height})"
-
-    def __del__(self):
-        print("Bye rectangle...")
-        type(self).number_of_instances -= 1
-
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         if not isinstance(rect_1, Rectangle):
@@ -107,3 +92,18 @@ class Rectangle:
             size (int): The width and height of the new Rectangle.
         """
         return cls(size, size)
+
+    def __str__(self):
+        if self.__height == 0 or self.__width == 0:
+            return ""
+        rec = ""
+        for i in range(self.__height):
+            rec += str(self.print_symbol) * self.__width + "\n"
+        return rec[:-1]
+
+    def __repr__(self):
+        return f"Rectangle({self.__width}, {self.__height})"
+
+    def __del__(self):
+        print("Bye rectangle...")
+        type(self).number_of_instances -= 1
