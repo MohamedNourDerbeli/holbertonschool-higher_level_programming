@@ -106,4 +106,4 @@ class Rectangle:
         Returns:
             (Rectangle): instance of rectangle
         """
-        return cls(size, size)
+        return cls(int(size), int(size))
