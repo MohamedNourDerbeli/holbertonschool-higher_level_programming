@@ -73,26 +73,6 @@ class Rectangle:
             return 0
         return (self.__height + self.__width) * 2
 
-    @staticmethod
-    def bigger_or_equal(rect_1, rect_2):
-        if not isinstance(rect_1, Rectangle):
-            raise TypeError("rect_1 must be an instance of Rectangle")
-        if not isinstance(rect_2, Rectangle):
-            raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect_1.area() >= rect_2.area():
-            return rect_1
-        else:
-            return rect_2
-
-    @classmethod
-    def square(cls, size=0):
-        """Return a new Rectangle with width and height equal to size.
-
-        Args:
-            size (int): The width and height of the new Rectangle.
-        """
-        return cls(size, size)
-
     def __str__(self):
         if self.__height == 0 or self.__width == 0:
             return ""
@@ -107,3 +87,25 @@ class Rectangle:
     def __del__(self):
         print("Bye rectangle...")
         type(self).number_of_instances -= 1
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        else:
+            return rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        """
+        Make a square from a rectangle
+        Args:
+            size (int): the size of the square
+        Returns:
+            (Rectangle): instance of rectangle
+        """
+        return cls(size, size)
