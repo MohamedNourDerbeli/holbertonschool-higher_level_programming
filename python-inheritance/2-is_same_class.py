@@ -1,10 +1,10 @@
+#!/usr/bin/python3
 """
 This function checks if the given object
 is an instance of the specified class.
 """
 
 
-#!/usr/bin/python3
 def is_same_class(obj, a_class):
     """
     If they match, the function returns True;
