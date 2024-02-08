@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Determines whether the object is an instance of the specified class.
+"""
 def is_kind_of_class(obj, a_class):
     """
     Determines whether the object is an instance of the specified class.
