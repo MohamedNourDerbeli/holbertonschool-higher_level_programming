@@ -35,19 +35,6 @@ class Rectangle:
     integer and greater than or equal to 0. Raises a TypeError otherwise.
     """
 
-    @height.setter
-    def height(self, value):
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer")
-        if value < 0:
-            raise ValueError("height must be >= 0")
-        self.__height = value
-
-    """
-    Property getter for the width attribute,
-    returns the private variable __width.
-    """
-
     @property
     def width(self):
         return self.__width
@@ -65,6 +52,19 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
+    @height.setter
+    def height(self, value):
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
+
+    """
+    Property getter for the width attribute,
+    returns the private variable __width.
+    """
+
     def area(self):
         return self.__height * self.__width
 
@@ -77,7 +77,7 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return ""
         sy = str(self.print_symbol)
-        return ((sy*self.__width + "\n")*self.__height)[:-1]
+        return ((sy * self.__width + "\n") * self.__height)[:-1]
 
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
@@ -106,4 +106,4 @@ class Rectangle:
         Returns:
             (Rectangle): instance of rectangle
         """
-        return (cls(size, size))
+        return cls(size, size)
