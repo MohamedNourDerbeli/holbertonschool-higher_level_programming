@@ -1,4 +1,4 @@
-class MyList(list):
+class MyList:
     """
     A subclass of list that provides a method to
     print a sorted version of itself.
