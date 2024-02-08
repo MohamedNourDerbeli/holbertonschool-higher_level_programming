@@ -22,17 +22,8 @@ class Rectangle:
         type(self).number_of_instances += 1
 
     """
-    Property getter for the height attribute,
-    returns the private variable __height.
-    """
-
-    @property
-    def height(self):
-        return self.__height
-
-    """
-    Property setter for the height attribute, validating that the input is an
-    integer and greater than or equal to 0. Raises a TypeError otherwise.
+    Property getter for the width attribute,
+    returns the private variable __width.
     """
 
     @property
@@ -52,6 +43,20 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
+    """
+    Property getter for the height attribute,
+    returns the private variable __height.
+    """
+
+    @property
+    def height(self):
+        return self.__height
+
+    """
+    Property setter for the height attribute, validating that the input is an
+    integer and greater than or equal to 0. Raises a TypeError otherwise.
+    """
+
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
@@ -59,11 +64,6 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
-    """
-    Property getter for the width attribute,
-    returns the private variable __width.
-    """
 
     def area(self):
         return self.__height * self.__width
