@@ -1,3 +1,10 @@
+#!/usr/bin/python3
+"""
+    A subclass of list that provides a method to
+    print a sorted version of itself.
+    """
+
+
 class MyList(list):
     """
     A subclass of list that provides a method to
