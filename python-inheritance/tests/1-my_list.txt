@@ -75,4 +75,21 @@ TypeError: '<' not supported between instances of 'int' and 'list'
 >>> my_list.print_sorted()
 []
 
+>>> my_list = MyList()
+>>> type(my_list)
+<class '1-my_list.MyList'>
+
+>>> my_list = MyList([1, 2, 3])
+>>> print(my_list)
+[1, 2, 3]
+
+>>> my_list = MyList([1, 2], [3, 4])
+Traceback (most recent call last):
+TypeError: list() takes at most 1 argument (2 given)
+
+>>> my_list[0] = 5
+>>> print(my_list)
+[5, 2, 3]
+
+
 """
