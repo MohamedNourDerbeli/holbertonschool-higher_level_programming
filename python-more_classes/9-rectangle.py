@@ -43,19 +43,10 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-    """
-    Property getter for the height attribute,
-    returns the private variable __height.
-    """
-
     @property
     def height(self):
+        """Get/set the height of the Rectangle."""
         return self.__height
-
-    """
-    Property setter for the height attribute, validating that the input is an
-    integer and greater than or equal to 0. Raises a TypeError otherwise.
-    """
 
     @height.setter
     def height(self, value):
