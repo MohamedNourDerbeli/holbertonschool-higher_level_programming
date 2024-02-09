@@ -1,5 +1,5 @@
 """
-Description: Test add_integer function
+Description: Test BaseGeometry function
 
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
