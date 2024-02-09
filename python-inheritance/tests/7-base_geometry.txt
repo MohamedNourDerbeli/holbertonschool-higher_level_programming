@@ -28,9 +28,21 @@
 
 ::
 
+    >>> bg.area(5, 5)
+    Traceback (most recent call last):
+    TypeError: BaseGeometry.area() takes 1 positional argument but 3 were given
+
+::
+
     >>> bg.integer_validator("distance", -4)
     Traceback (most recent call last):
     ValueError: distance must be greater than 0
+
+::
+
+    >>> bg.integer_validator("age", (4,))
+    Traceback (most recent call last):
+    TypeError: age must be an integer
 
 ::
 
@@ -70,5 +82,11 @@
     >>> bg.integer_validator("name", 1, 2)
     Traceback (most recent call last):
     TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
+
+::
+
+    >>> bg.area(65)
+    Traceback (most recent call last):
+    TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
 
 """
