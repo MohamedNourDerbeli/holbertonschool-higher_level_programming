@@ -25,8 +25,6 @@ class BaseGeometry:
             raise ValueError(f"{name} must be greater than 0")
 
 
-#!/usr/bin/python3
-
 """
 This script defines a Rectangle class with properties for width and height,
 which are enforced to be positive integers.
