@@ -1,9 +1,8 @@
-#!/usr//python3
+#!/usr/bin/python3
 
 """
 This is a base class for geometry-related objects.
 """
-
 
 class BaseGeometry:
     """
