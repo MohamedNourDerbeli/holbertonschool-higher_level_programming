@@ -1,4 +1,4 @@
-"""
+
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 
@@ -88,5 +88,3 @@
     >>> bg.area(65)
     Traceback (most recent call last):
     TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
-
-"""
