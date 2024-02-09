@@ -25,7 +25,21 @@ class BaseGeometry:
             raise ValueError(f"{name} must be greater than 0")
 
 
+#!/usr/bin/python3
+
+"""
+This script defines a Rectangle class with properties for width and height,
+which are enforced to be positive integers.
+"""
+
+
 class Rectangle(BaseGeometry):
+
+    """
+    Constructor for the Rectangle class, initializing a rectangle with the
+    given width and height values. Defaults to zero if no values are provided.
+    """
+
     def __init__(self, width, height):
         BaseGeometry().integer_validator("width", width)
         BaseGeometry().integer_validator("height", height)
