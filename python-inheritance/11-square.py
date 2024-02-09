@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """Author: Nour Mohamed12"""
-
-
-Rectangle = __import__("9-rectangle").Rectangle
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
@@ -14,7 +12,6 @@ class Square(Rectangle):
         Args:
             size (int): The size
         """
-
         self.integer_validator("size", size)
         super().__init__(size, size)
         self.__size = size
