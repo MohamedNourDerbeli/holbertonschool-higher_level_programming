@@ -5,6 +5,5 @@ import json
 
 
 def to_json_string(my_obj):
-    """Use the json.dumps method to serialize the object
-    to a JSON formatted string"""
+    """serialize the object to a JSON formatted string"""
     return json.dumps(my_obj)
