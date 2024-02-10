@@ -18,7 +18,9 @@ class Student:
             return {att: self.__dict__[att] for att in attrs if hasattr(self, att)}
 
     def reload_from_json(self, json):
-        z = ""
-        for y in json.values():
-            z = z + " " + str(y)
-        print(z.lstrip(" "))
+        dect = []
+        for key, value in json.items():
+            dect.append(value)
+        self.first_name = dect[0]
+        self.last_name = dect[1]
+        self.age = dect[2]
