@@ -12,7 +12,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """Converts the Student object to a JSON-compatible dictionary."""
-        if attrs == None:
+        if attrs is None:
             return self.__dict__
         else:
             my_dict = {}
