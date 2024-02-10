@@ -6,4 +6,4 @@ import json
 def from_json_string(my_str):
     """serialize the object from a JSON formatted string"""
 
-    return json.load(my_str)
+    return json.loads(my_str)
