@@ -19,9 +19,5 @@ class Student:
                     att in attrs if hasattr(self, att)}
 
     def reload_from_json(self, json):
-        dect = []
         for key, value in json.items():
-            dect.append(value)
-        self.first_name = dect[0]
-        self.last_name = dect[1]
-        self.age = dect[2]
+            setattr(self, key, value)
