@@ -3,6 +3,7 @@
 This is a simple script to demonstrate
 how to use the pyrebase library.
 """
+import json
 
 
 class Base:
@@ -21,6 +22,6 @@ class Base:
     def to_json_string(list_dictionaries):
         """Returns a JSON string from a list of dictionaries."""
         if list_dictionaries is None:
-            return []
+            return json.dumps(None)
         else:
-            return str(list(list_dictionaries))
+            return json.dumps(list_dictionaries)
