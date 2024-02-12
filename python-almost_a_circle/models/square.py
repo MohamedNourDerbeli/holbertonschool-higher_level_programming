@@ -4,7 +4,7 @@ This is a simple script to demonstrate
 how to use the PyInquirer library in Python
 """
 from models.rectangle import Rectangle
-
+import json
 
 class Square(Rectangle):
     """A class that represents a square."""
@@ -54,3 +54,12 @@ class Square(Rectangle):
             self.y = args[3]
         for key, value in kwargs.items():
             setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Convert the Square object into a dictionary."""
+        return {
+            "x": self.__x,
+            "y": self.__y,
+            "id": self.id,
+            "size": self.size,
+        }
