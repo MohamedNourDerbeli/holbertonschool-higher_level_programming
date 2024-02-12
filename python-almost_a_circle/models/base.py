@@ -7,6 +7,7 @@ how to use the pyrebase library.
 
 class Base:
     """A base class for our Firebase application."""
+
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -15,3 +16,11 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = self.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Returns a JSON string from a list of dictionaries."""
+        if list_dictionaries is None:
+            return []
+        else:
+            return str(list(list_dictionaries))
