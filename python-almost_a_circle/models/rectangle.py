@@ -80,8 +80,9 @@ class Rectangle(Base):
 
     def display(self):
         """Display the rectangle's attributes on the console."""
+        print("\n" * self.__y, end="")
         for line in range(self.__height):
-            print("#" * self.__width)
+            print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
         """Return a string representation of the rectangle."""
