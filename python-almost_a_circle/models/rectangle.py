@@ -89,8 +89,9 @@ class Rectangle(Base):
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
 {self.__width}/{self.__height}"
 
-    def update(self, *args):
-        """Update one or more attributes of the rectangle."""
+    def update(self, *args, **kwargs):
+        """Update the rectangle's attributes based on keyword arguments."""
+
         if len(args) >= 1:
             self.id = args[0]
         if len(args) >= 2:
@@ -101,3 +102,5 @@ class Rectangle(Base):
             self.__x = args[3]
         if len(args) >= 5:
             self.__y = args[4]
+        for key, value in kwargs.items():
+            setattr(self, key, value)
