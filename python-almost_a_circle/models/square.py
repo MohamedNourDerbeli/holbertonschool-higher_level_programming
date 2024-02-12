@@ -27,3 +27,17 @@ class Square(Rectangle):
             _type_: _description_
         """
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+
+    @property
+    def size(self):
+        """Getter for width and height properties of the rectangle."""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """Setter for width and height properties of the rectangle. They must be equal."""
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        elif value <= 0:
+            raise ValueError("width must be > 0")
+        self.width = self.height = value
