@@ -9,13 +9,6 @@ from models.base import Base
 class Rectangle(Base):
     """docstring for Rectangle"""
 
-    def __init__(self, width, height, x=0, y=0, id=None):
-        super().__init__(id)
-        self.height = height
-        self.width = width
-        self.x = x
-        self.y = y
-
     @property
     def height(self):
         return self.__height
@@ -64,5 +57,12 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
+    def __init__(self, width, height, x=0, y=0, id=None):
+        super().__init__(id)
+        self.height = height
+        self.width = width
+        self.x = x
+        self.y = y
+
     def area(self):
-        return self.__height * self.__width
+        return self.__width * self.__height
