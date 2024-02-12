@@ -5,6 +5,7 @@ how to use the PyOpenGL library to draw a rectangle.
 """
 from models.base import Base
 
+
 class Rectangle(Base):
     """Rectangle class representing a rectangle object."""
 
@@ -65,7 +66,8 @@ class Rectangle(Base):
         self.__y = value
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Initialize the Rectangle object with specified dimensions and coordinates."""
+        """Initialize the Rectangle object with specified
+        dimensions and coordinates."""
         super().__init__(id)
         self.height = height
         self.width = width
