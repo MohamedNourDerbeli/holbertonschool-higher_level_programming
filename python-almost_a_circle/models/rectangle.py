@@ -82,3 +82,7 @@ class Rectangle(Base):
         """Display the rectangle's attributes on the console."""
         for line in range(self.__height):
             print("#" * self.__width)
+
+    def __str__(self):
+        """Return a string representation of the rectangle."""
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
