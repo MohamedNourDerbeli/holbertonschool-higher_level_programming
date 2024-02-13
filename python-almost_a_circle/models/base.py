@@ -28,6 +28,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """Saves objects in a file (one object per line)."""
         if list_objs is None:
             with open(f"{cls.__name__}.json", "w") as fp:
                 json.dump([], fp)
@@ -38,6 +39,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """Returns a list of objects from a JSON string."""
         if json_string is None:
             return []
         else:
@@ -46,5 +48,6 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """Creates an instance of the class using a dictionary."""
         obj = cls(**dictionary)
         return obj
