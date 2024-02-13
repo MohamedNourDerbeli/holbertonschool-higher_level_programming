@@ -49,5 +49,5 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """Creates an instance of the class using a dictionary."""
-        obj = cls(**dictionary)
-        return obj
+        cls.update(dictionary)
+        return cls(**dictionary)
