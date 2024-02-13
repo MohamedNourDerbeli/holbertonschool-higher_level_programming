@@ -35,3 +35,11 @@ class Base:
             data = list(i.to_dictionary() for i in list_objs)
             with open(f"{cls.__name__}.json", "w") as fp:
                 fp.write(cls.to_json_string(data))
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None:
+            return []
+        else:
+            data = list(json.loads(json_string))
+            return data
