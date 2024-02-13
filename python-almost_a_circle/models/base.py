@@ -43,3 +43,8 @@ class Base:
         else:
             data = list(json.loads(json_string))
             return data
+
+    @classmethod
+    def create(cls, **dictionary):
+        obj = cls(**dictionary)
+        return obj
