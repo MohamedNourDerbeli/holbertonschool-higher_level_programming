@@ -63,6 +63,8 @@ class Base:
                 for i in cls.from_json_string(fp.read()):
                     lis.append(cls.create(**i))
                 return lis
+        else:
+            return []
 
     # @staticmethod
     # def draw(list_rectangles, list_squares):
