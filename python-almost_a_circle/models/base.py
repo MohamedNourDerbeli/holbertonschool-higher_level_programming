@@ -4,6 +4,8 @@ This is a simple script to demonstrate
 how to use the pyrebase library.
 """
 import json
+from os.path import isfile
+from turtle import *
 
 
 class Base:
@@ -51,3 +53,23 @@ class Base:
         """Creates an instance of the class using a dictionary."""
         cls.update(dictionary)
         return cls(**dictionary)
+
+    @classmethod
+    def load_from_file(cls):
+        """Loads objects from a file and returns them as a list."""
+        if isfile(f"{cls.__name__}.json"):
+            with open(f"{cls.__name__}.json", "r") as fp:
+                data = cls.from_json_string(fp.read())
+        lis = []
+        for i in data:
+            lis.append(cls(**i))
+        return lis
+
+    # @staticmethod
+    # def draw(list_rectangles, list_squares):
+    #     """Draws rectangles and squares on screen."""
+    #     while True:
+    #         forward(200)
+    #         left(170)
+    #         if abs(pos()) < 1:
+    #             break
