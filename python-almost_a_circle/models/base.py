@@ -58,11 +58,12 @@ class Base:
     def load_from_file(cls):
         """Loads objects from a file and returns them as a list."""
         if isfile(f"{cls.__name__}.json"):
-            lis = []
             with open(f"{cls.__name__}.json", "r") as fp:
-                for i in cls.from_json_string(fp.read()):
-                    lis.append(cls.create(**i))
-                return lis
+                data = cls.from_json_string(fp.read())
+            lis = []
+            for i in data:
+                lis.append(cls.create(**i))
+            return lis
         else:
             return []
 
