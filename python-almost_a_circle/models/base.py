@@ -62,7 +62,7 @@ class Base:
                 data = cls.from_json_string(fp.read())
         lis = []
         for i in data:
-            lis.append(cls(**i))
+            lis.append(cls.create(**i))
         return lis
 
     # @staticmethod
