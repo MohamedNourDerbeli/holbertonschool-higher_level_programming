@@ -72,7 +72,7 @@ class TestSquare_size(unittest.TestCase):
             Square("invalid")
 
     def test_bool_size(self):
-        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square(True, 2, 3)
 
     def test_list_size(self):
