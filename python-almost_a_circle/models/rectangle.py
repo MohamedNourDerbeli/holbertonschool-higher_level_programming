@@ -65,7 +65,7 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
-    def __init__(self, width, height, x=0, y=0, id=None):
+    def __init__(self, width, height=0, x=0, y=0, id=None):
         """Initialize the Rectangle object with specified
         dimensions and coordinates."""
         super().__init__(id)

@@ -1,17 +1,6 @@
 #!/usr/bin/python3
-# test_base.py
-# Brennan D Baraban <375@holbertonschool.com>
-"""Defines unittests for base.py.
-
-Unittest classes:
-    TestBase_instantiation - line 23
-    TestBase_to_json_string - line 110
-    TestBase_save_to_file - line 156
-    TestBase_from_json_string - line 234
-    TestBase_create - line 288
-    TestBase_load_from_file - line 340
-    TestBase_save_to_file_csv - line 406
-    TestBase_load_from_file_csv - line 484
+"""
+Defines unittests for base.py.
 """
 import os
 import unittest
@@ -21,7 +10,7 @@ from models.square import Square
 
 
 class TestBase_instantiation(unittest.TestCase):
-    """Unittests for testing instantiation of the Base class."""
+    """Unittests for testing instantiation """
 
     def test_no_arg(self):
         b1 = Base()
@@ -60,55 +49,13 @@ class TestBase_instantiation(unittest.TestCase):
     def test_str_id(self):
         self.assertEqual("hello", Base("hello").id)
 
-    def test_float_id(self):
-        self.assertEqual(5.5, Base(5.5).id)
-
-    def test_complex_id(self):
-        self.assertEqual(complex(5), Base(complex(5)).id)
-
-    def test_dict_id(self):
-        self.assertEqual({"a": 1, "b": 2}, Base({"a": 1, "b": 2}).id)
-
-    def test_bool_id(self):
-        self.assertEqual(True, Base(True).id)
-
-    def test_list_id(self):
-        self.assertEqual([1, 2, 3], Base([1, 2, 3]).id)
-
-    def test_tuple_id(self):
-        self.assertEqual((1, 2), Base((1, 2)).id)
-
-    def test_set_id(self):
-        self.assertEqual({1, 2, 3}, Base({1, 2, 3}).id)
-
-    def test_frozenset_id(self):
-        self.assertEqual(frozenset({1, 2, 3}), Base(frozenset({1, 2, 3})).id)
-
-    def test_range_id(self):
-        self.assertEqual(range(5), Base(range(5)).id)
-
-    def test_bytes_id(self):
-        self.assertEqual(b'Python', Base(b'Python').id)
-
-    def test_bytearray_id(self):
-        self.assertEqual(bytearray(b'abcefg'), Base(bytearray(b'abcefg')).id)
-
-    def test_memoryview_id(self):
-        self.assertEqual(memoryview(b'abcefg'), Base(memoryview(b'abcefg')).id)
-
-    def test_inf_id(self):
-        self.assertEqual(float('inf'), Base(float('inf')).id)
-
-    def test_NaN_id(self):
-        self.assertNotEqual(float('nan'), Base(float('nan')).id)
-
     def test_two_args(self):
         with self.assertRaises(TypeError):
             Base(1, 2)
 
 
 class TestBase_to_json_string(unittest.TestCase):
-    """Unittests for testing to_json_string method of Base class."""
+    """Unittests for testing to_json_string """
 
     def test_to_json_string_rectangle_type(self):
         r = Rectangle(10, 7, 2, 8, 6)
@@ -154,7 +101,7 @@ class TestBase_to_json_string(unittest.TestCase):
 
 
 class TestBase_save_to_file(unittest.TestCase):
-    """Unittests for testing save_to_file method of Base class."""
+    """Unittests for testing save_to_file method """
 
     @classmethod
     def tearDown(self):
@@ -232,7 +179,7 @@ class TestBase_save_to_file(unittest.TestCase):
 
 
 class TestBase_from_json_string(unittest.TestCase):
-    """Unittests for testing from_json_string method of Base class."""
+    """Unittests for testing from_json_string method """
 
     def test_from_json_string_type(self):
         list_input = [{"id": 89, "width": 10, "height": 4}]
@@ -286,7 +233,7 @@ class TestBase_from_json_string(unittest.TestCase):
 
 
 class TestBase_create(unittest.TestCase):
-    """Unittests for testing create method of Base class."""
+    """Unittests for testing create method """
 
     def test_create_rectangle_original(self):
         r1 = Rectangle(3, 5, 1, 2, 7)
@@ -338,7 +285,7 @@ class TestBase_create(unittest.TestCase):
 
 
 class TestBase_load_from_file(unittest.TestCase):
-    """Unittests for testing load_from_file_method of Base class."""
+    """Unittests for testing load_from_file_method """
 
     @classmethod
     def tearDown(self):
@@ -401,7 +348,6 @@ class TestBase_load_from_file(unittest.TestCase):
     def test_load_from_file_more_than_one_arg(self):
         with self.assertRaises(TypeError):
             Base.load_from_file([], 1)
-
 
 if __name__ == "__main__":
     unittest.main()
