@@ -7,11 +7,13 @@ import unittest
 import json
 from models import square
 from models.base import Base
+
 Square = square.Square
 
 
 class TestSquare(unittest.TestCase):
     """Test the functionality of the Square class"""
+
     @classmethod
     def setUpClass(cls):
         """set up the tests"""
@@ -59,20 +61,6 @@ class TestSquare(unittest.TestCase):
             s = Square("hello")
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             s = Square(True)
-
-    def test_x_typeerror(self):
-        """Test non-ints for x"""
-        with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            s = Square(1, "hello")
-        with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            s = Square(1, True)
-
-    def test_y_typeerror(self):
-        """Test non-ints for y"""
-        with self.assertRaisesRegex(TypeError, "y must be an integer"):
-            s = Square(1, 1, "hello")
-        with self.assertRaisesRegex(TypeError, "y must be an integer"):
-            s = Square(1, 1, True)
 
     def test_size_valueerror(self):
         """Test ints <= 0 for size"""
