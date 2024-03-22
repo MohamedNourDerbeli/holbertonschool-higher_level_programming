@@ -20,5 +20,17 @@ if __name__ == "__main__":
     )
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM `states`")
-    [print(state) for state in cur.fetchall() if state[1] == argv[4]]
+    cur.execute(
+        """
+            SELECT
+                *
+            FROM
+                states
+            WHERE
+                name LIKE BINARY %(name)s
+            ORDER BY
+                states.id ASC
+        """,
+        {"name": argv[4]},
+    )
+    [print(state) for state in cur.fetchall() if cur.fetchall() is not None]
