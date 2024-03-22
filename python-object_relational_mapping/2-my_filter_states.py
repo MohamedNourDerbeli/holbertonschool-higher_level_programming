@@ -11,5 +11,7 @@ if __name__ == "__main__":
         host="localhost", port=3306, user=argv[1], passwd=argv[2], db=argv[3]
     )
     cur = db.cursor()
-    cur.execute("SELECT * FROM states ORDER BY states.id")
-    [print(state) for state in cur.fetchall() if state[1] == argv[4]]
+    cur.execute(f"SELECT * FROM states \
+                 WHERE name LIKE BINARY '{argv[4]}' \
+                 ORDER BY states.id ASC")
+    [print(state) for state in cur.fetchall()]
