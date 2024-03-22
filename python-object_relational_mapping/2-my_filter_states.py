@@ -12,4 +12,4 @@ if __name__ == "__main__":
     )
     cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY states.id")
-    [print(state) for state in cur.fetchall() if state[1] in argv]
+    [print(state) for state in cur.fetchall() if state[1] == argv[4]]
