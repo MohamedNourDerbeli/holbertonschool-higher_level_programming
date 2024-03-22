@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 """
-script that takes in an argument and displays
-all values in the states
+This script takes in an argument and
+displays all values in the states
+where `name` matches the argument
+from the database `hbtn_0e_0_usa`.
 """
+
 import MySQLdb
 from sys import argv
 
@@ -11,13 +14,20 @@ if __name__ == "__main__":
     Access to the database and get the states
     from the database.
     """
+
     db = MySQLdb.connect(
-        host="localhost", port=3306, user=argv[1], passwd=argv[2], db=argv[3]
+        host="localhost", user=argv[1], port=3306, passwd=argv[2], db=argv[3]
     )
+
     cur = db.cursor()
     cur.execute(
-        f"SELECT * FROM states \
-WHERE name LIKE BINARY '{argv[4]}' \
-ORDER BY states.id ASC"
+        "SELECT * FROM states \
+                 WHERE name LIKE BINARY '{}' \
+                 ORDER BY states.id ASC".format(
+            argv[4]
+        )
     )
-    [print(state) for state in cur.fetchall()]
+    rows = cur.fetchall()
+
+    for row in rows:
+        print(row)
