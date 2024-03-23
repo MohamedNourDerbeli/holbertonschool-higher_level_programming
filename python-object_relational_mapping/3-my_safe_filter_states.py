@@ -7,19 +7,18 @@ from the database `hbtn_0e_0_usa`.
 """
 
 import MySQLdb
-from sys import argv
-
-if __name__ == "__main__":
+import sys
+def  main(username, passsword, db_name, state_name):
     """
     Access to the database and get the states
     from the database.
     """
 
     db = MySQLdb.connect(
-        host="localhost", user=argv[1], port=3306, passwd=argv[2], db=argv[3]
+        host="localhost", user=username, port=3306, passwd=passsword, db=db_name
     )
-
     cur = db.cursor()
+
     cur.execute(
         """
             SELECT
@@ -31,6 +30,13 @@ if __name__ == "__main__":
             ORDER BY
                 states.id ASC
         """,
-        {"name": argv[4]},
+        {"name": state_name},
     )
-    [print(state) for state in cur.fetchall() if cur.fetchall() is not None]
+    [print(state) for state in cur.fetchall()]
+if __name__ == "__main__":
+    username = sys.argv[1]
+    password = sys.argv[2]
+    db_name = sys.argv[3]
+    state_name = sys.argv[4]
+
+    main(username, password, db_name, state_name)
