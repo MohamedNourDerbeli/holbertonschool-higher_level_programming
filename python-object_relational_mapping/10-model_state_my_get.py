@@ -8,7 +8,7 @@ from model_state import Base, State
 import sys
 
 
-def main(username, password, db_name ,  state_name):
+def main(username, password, db_name, state_name):
     """
     Access to the database and get the states
     from the database.
@@ -39,4 +39,4 @@ if __name__ == "__main__":
     password = sys.argv[2]
     db_name = sys.argv[3]
     state_name = sys.argv[4]
-    main(username, password, db_name , state_name)
+    main(username, password, db_name, state_name)
