@@ -26,7 +26,7 @@ def main(username, password, db_name):
 
     # Print the first state or "Nothing" if the table is empty
     if first_state is not None:
-        print(first_state)
+        print(f"{first_state.id}: {first_state.name}")
     else:
         print("Nothing")
     # Close the session
