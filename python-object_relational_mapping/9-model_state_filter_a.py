@@ -21,10 +21,10 @@ def main(username, password, db_name):
     Session = sessionmaker(bind=engine)
     # Create a Session
     session = Session()
-    # Query the first State object
+    # Query the State object
     first_state = session.query(State).order_by(State.id)
 
-    # Print the first state or "Nothing" if the table is empty
+    # Print the State name that contains "a"
     if first_state is not None:
         for state in first_state.filter(State.name.contains("a")):
             print("{}: {}".format(state.id, state.name))
