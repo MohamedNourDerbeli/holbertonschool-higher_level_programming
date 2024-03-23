@@ -21,7 +21,8 @@ def main(username, passsword, db_name, state_name):
 
     cur.execute(
         """
-        SELECT cities.name FROM \
+        SELECT cities.id,
+        cities.name FROM \
 cities JOIN states ON \
 cities.state_id = states.id \
 WHERE states.name = %(name)s ORDER BY \
@@ -29,12 +30,10 @@ cities.id ASC;
         """,
         {"name": state_name},
     )
-    results = cur.fetchall()
-    li = list()
-    for row in results:
-        li.append(row[0])
-    li = set(li)
-    print(", ".join(li))
+    rows = cur.fetchall()
+
+    if rows is not None:
+        print(", ".join([row[1] for row in rows]))
 
 
 if __name__ == "__main__":
