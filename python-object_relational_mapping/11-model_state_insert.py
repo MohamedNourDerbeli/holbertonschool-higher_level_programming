@@ -21,7 +21,7 @@ def main(username, password, db_name):
     # Create a Session
     session = Session()
     # Query the states and print it
-    our_user= State(name = 'Louisiana')
+    our_user = State(name="Louisiana")
     session.add(our_user)
     session.commit()
     print(our_user.id)
