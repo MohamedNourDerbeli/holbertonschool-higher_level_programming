@@ -21,7 +21,7 @@ def main(username, password, db_name):
     # Create a Session
     session = Session()
     # Query the states and print it
-    update = session.query(State).filter_by(id = 2).first()
+    update = session.query(State).filter_by(id=2).first()
     update.name = "New Mexico"
     session.commit()
     # Close the session
